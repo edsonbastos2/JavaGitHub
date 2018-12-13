@@ -1,0 +1,25 @@
+package applicatio;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Program {
+
+	public static void main(String[] args) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Calendar cal = Calendar.getInstance();
+		
+		Date x = sdf.parse("12/12/2018");
+		cal.setTime(x);
+		int month = cal.get(Calendar.MONTH);
+		int year = cal.get(Calendar.YEAR);
+		
+		System.out.println(sdf.format(x));
+		System.out.println(month);
+		System.out.println(year);
+
+	}
+
+}
